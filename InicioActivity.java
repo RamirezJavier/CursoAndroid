@@ -12,10 +12,7 @@ import android.widget.Toast;
 
 public class InicioActivity extends AppCompatActivity {
 
-    Button btnSaludar;
-    TextView tvMensaje;
-    RadioButton rbIsHombre;
-    RadioButton rbIsMujer;
+    Button Calculo1, Calculo2, Calculo3;
 
 
     @Override
@@ -23,32 +20,22 @@ public class InicioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        btnSaludar = findViewById(R.id.btnEnviarSaludo);
-        tvMensaje = findViewById(R.id.tvMensaje);
-        rbIsHombre = findViewById(R.id.rbHombre);
-        rbIsMujer = findViewById(R.id.rbMujer);
+        Calculo1 = findViewById(R.id.btCalculo1);
+        Calculo2 = findViewById(R.id.btCalculo2);
+        Calculo3 = findViewById(R.id.btCalculo3);
 
 
-        btnSaludar.setOnClickListener(new View.OnClickListener() {
+        Calculo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(rbIsHombre.isChecked()==true)
-                {
-                    tvMensaje.setText("Bienvenido");
-                }
-                else if(rbIsMujer.isChecked()==true)
-                {
-                    tvMensaje.setText("Bienvenida");
-                    startActivity(new Intent(InicioActivity.this, Menu.class));
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "Tienes que elegir uno, xd ", Toast.LENGTH_SHORT).show();
-                }
+                startActivity(new Intent(InicioActivity.this, Calculo1Activity.class));
 
             }
         });
+
+
+
 
 
 
