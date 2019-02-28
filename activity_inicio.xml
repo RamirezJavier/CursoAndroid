@@ -1,70 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InicioActivity">
 
+
     <TextView
-        android:id="@+id/tvMensaje"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="BIENVENIDO"
+        android:textSize="24sp" />
 
     <Button
-        android:id="@+id/btnEnviarSaludo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="127dp"
-        android:text="Saludar" />
-
-    <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/btCalculo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="153dp"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:layout_marginTop="97dp"
+        android:text="Calculo 1" />
 
-    <EditText
-        android:id="@+id/etNombre"
+    <Button
+        android:id="@+id/btCalculo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_marginTop="199dp"
+        android:text="Calculo 2" />
 
-    <RadioButton
-        android:id="@+id/rbHombre"
-        android:layout_width="100dp"
+    <Button
+        android:id="@+id/btCalculo3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="196dp"
-        android:text="Hombre" />
-
-    <RadioButton
-        android:id="@+id/rbMujer"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Mujer" />
-
-
+        android:layout_marginBottom="172dp"
+        android:text="Calculo 3" />
 </RelativeLayout>
