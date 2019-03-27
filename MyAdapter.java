@@ -42,20 +42,34 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        //Copiamos la vista
-        View v = convertView;
+        //View Holder Pattern
+        ViewHolder holder;
 
-        //Inflamos la vista de nuestro Layout
-        LayoutInflater layoutInflater = LayoutInflater.from(this.context);
-        v = layoutInflater.inflate(R.layout.list_item, null);
+        if(convertView==null)
+        {
+            //Inflamos la vista de nuestro Layout
+            LayoutInflater layoutInflater = LayoutInflater.from(this.context);
+            convertView = layoutInflater.inflate(this.layout, null);
+
+            holder = new ViewHolder(); //Nueva instancia del holder
+            //Referencia a los elementos que vamos a modificar
+            holder.nameTextView = convertView.findViewById(R.id.tvMyAdapter);
+            convertView.setTag(holder); //Meter un objeto
+        }
+        else
+        {
+            holder = (ViewHolder) convertView.getTag();
+        }
 
         //Nos traemos el valor actual de la posicion
         String currentOpcion = opciones.get(position);
 
-        //Referencia a los elementos que vamos a midificar
-        TextView tvOpciones = v.findViewById(R.id.tvMyAdapter);
-        tvOpciones.setText(currentOpcion);
+        holder.nameTextView.setText(currentOpcion);
 
-        return v; //MODIFICAR ESTE RETURN
+        return convertView; //MODIFICAR ESTE RETURN
+    }
+
+    static class ViewHolder {
+        private TextView nameTextView;
     }
 }
