@@ -43,6 +43,18 @@ public class InicioActivity extends AppCompatActivity {
             }
         });
 
+        Calculo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(InicioActivity.this, Calculo3Activity.class));
+
+            }
+        });
+
+
+
+
+
 
 
 
